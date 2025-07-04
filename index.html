@@ -11,14 +11,15 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
         }
         .hero-section {
-            background-image: linear-gradient(rgba(0, 21, 41, 0.7), rgba(0, 21, 41, 0.7)), url('https://i.ibb.co/V06jwJDR/1583918159714.jpg');
+            background-image: linear-gradient(rgba(0, 21, 41, 0.75), rgba(0, 21, 41, 0.75)), url('https://i.ibb.co/V06jwJDR/1583918159714.jpg');
             background-size: cover;
             background-position: center;
         }
         .section-title {
-            border-bottom: 3px solid #0056b3;
+            border-bottom: 3px solid #3b82f6;
             padding-bottom: 8px;
             display: inline-block;
         }
@@ -26,10 +27,9 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .card-hover:hover, .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        /* Carousel styles */
         .carousel-container {
             position: relative;
             overflow: hidden;
@@ -69,46 +69,81 @@
         .clickable-img-container:hover .gallery-img {
             filter: brightness(1.1);
         }
+        .modal-backdrop {
+            transition: opacity 0.3s ease;
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .logo-item .logo-img {
+            max-height: 50px;
+            width: auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        .logo-item:hover .logo-img {
+            filter: grayscale(0%);
+        }
     </style>
 </head>
 <body class="bg-gray-100">
 
-    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
         
         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
 
-            <header class="hero-section text-white text-center p-12 md:p-20">
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-2 tracking-tight">Shape Your Future in Business</h1>
-                <h2 class="text-3xl md:text-4xl font-bold text-blue-300 mb-4">MBA @ LDRP-ITR</h2>
-                <p class="text-lg md:text-xl font-medium text-blue-200">Where Leadership Meets Opportunity.</p>
+            <header class="hero-section text-white text-center p-16 md:p-24">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-3 tracking-tight">Shape Your Future in Business</h1>
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-300 mb-6">MBA @ LDRP-ITR</h2>
+                <p class="text-lg md:text-xl font-medium text-blue-200 max-w-3xl mx-auto">Propel your career with a dynamic, industry-focused MBA program designed to create the next generation of business leaders.</p>
             </header>
 
-            <section class="p-8 md:p-10 bg-white">
-                <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Why Choose LDRP for Your MBA?</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Card 1 -->
-                    <div class="text-center p-6 bg-gray-50 rounded-lg card-hover">
-                        <div class="flex justify-center mb-4"><div class="bg-blue-100 p-4 rounded-full"><svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.82m5.84-2.56a16.95 16.95 0 00-2.63-3.07A6 6 0 017.74 8.04v-4.82a16.95 16.95 0 00-2.63 3.07m11.48-3.07a16.95 16.95 0 00-2.63-3.07M3.75 6.75A16.95 16.95 0 016.38 3.68m11.48 3.07a16.95 16.95 0 012.63-3.07M21 6.75A16.95 16.95 0 0018.37 3.68m-1.54 9.49a5.98 5.98 0 01-1.04-3.07M15.23 7.23a5.98 5.98 0 00-1.04-3.07M6.38 3.68a5.98 5.98 0 01-1.04 3.07M8.26 15.23a5.98 5.98 0 001.04 3.07" /></svg></div></div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Accelerate Your Career</h3>
-                        <p class="text-gray-600">Leverage our strong industry connections and excellent placement record to land your dream job in top-tier companies.</p>
+            <!-- MERGED & REDESIGNED SECTION -->
+            <section class="p-8 md:p-12 bg-white fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">Key Pillars of the MBA@LDRPITR</h2>
+                <p class="text-center text-lg text-gray-500 mb-12">Unlock your potential with a program built for success.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                        <div class="bg-blue-100 text-blue-600 rounded-lg w-12 h-12 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Proven Legacy & Recognition</h3>
+                        <p class="text-gray-600 text-sm">AICTE Approved, Full-Time 2-Year Programme established in 2006.</p>
                     </div>
-                    <!-- Card 2 -->
-                    <div class="text-center p-6 bg-gray-50 rounded-lg card-hover">
-                        <div class="flex justify-center mb-4"><div class="bg-blue-100 p-4 rounded-full"><svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg></div></div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Gain Practical Skills</h3>
-                        <p class="text-gray-600">Move beyond theory with a curriculum rich in case studies, live projects, and role-playing to solve real-world business problems.</p>
+                    <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                        <div class="bg-blue-100 text-blue-600 rounded-lg w-12 h-12 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Expert Faculty</h3>
+                        <p class="text-gray-600 text-sm">Learn from highly qualified, all Ph.D. faculty members with a strong focus on academic excellence.</p>
                     </div>
-                    <!-- Card 3 -->
-                    <div class="text-center p-6 bg-gray-50 rounded-lg card-hover">
-                        <div class="flex justify-center mb-4"><div class="bg-blue-100 p-4 rounded-full"><svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.962a3.75 3.75 0 015.25 0m-5.25 0a3.75 3.75 0 00-5.25 0M3 13.5g7.5-5.25L18 13.5m0 0a3 3 0 11-5.712 1.128" /></svg></div></div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Build a Strong Network</h3>
-                        <p class="text-gray-600">Learn from expert faculty and connect with our successful alumni network, creating relationships that last a lifetime.</p>
+                    <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                        <div class="bg-blue-100 text-blue-600 rounded-lg w-12 h-12 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg></div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Excellent Placements</h3>
+                        <p class="text-gray-600 text-sm">Average of ₹4.1 Lakh p.a. and a maximum of ₹14 Lakh p.a. across all specializations.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                        <div class="bg-blue-100 text-blue-600 rounded-lg w-12 h-12 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Affordable & Flexible</h3>
+                        <p class="text-gray-600 text-sm">₹49,500 per semester with no extra expenses. Both CMAT & NON-CMAT admission modes.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                        <div class="bg-blue-100 text-blue-600 rounded-lg w-12 h-12 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0l-1.07-1.07a5.995 5.995 0 010-8.485l1.07-1.07m15.482 0l1.07 1.07a5.995 5.995 0 010 8.485l-1.07 1.07m-13.342 0c.136.23.283.454.438.669m12.466 0c.155-.215.303-.439.438-.669" /></svg></div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Innovative Pedagogy</h3>
+                        <p class="text-gray-600 text-sm">Engaging and updated teaching methods including case studies, live projects, and more.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                        <div class="bg-blue-100 text-blue-600 rounded-lg w-12 h-12 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Vibrant Student Life</h3>
+                        <p class="text-gray-600 text-sm">Industrial visits, alumni meets, mock interviews, field work, and many more activities.</p>
                     </div>
                 </div>
             </section>
             
-            <section class="p-8 md:p-10 bg-gray-50">
-                <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Glimpses of Life @ LDRP</h2>
+            <section class="p-8 md:p-12 bg-gray-50 fade-in-section">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Glimpses of life @ MBA-LDRPITR</h2>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                     <div class="gallery-item rounded-lg overflow-hidden col-span-2 md:col-span-1"><a href="https://i.ibb.co/gLZ95316/v3.jpg" target="_blank" class="clickable-img-container"><img src="https://i.ibb.co/gLZ95316/v3.jpg" alt="Industrial Visit to Vadilal" class="gallery-img"></a></div>
                     <div class="gallery-item rounded-lg overflow-hidden"><a href="https://i.ibb.co/SDSKdKWM/IMG-20250205-WA0083.jpg" target="_blank" class="clickable-img-container"><img src="https://i.ibb.co/SDSKdKWM/IMG-20250205-WA0083.jpg" alt="Classroom Session" class="gallery-img"></a></div>
@@ -118,68 +153,106 @@
                 </div>
             </section>
 
-            <section class="p-8 md:p-10 bg-white">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <section class="p-8 md:p-12 bg-white fade-in-section">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title">Meet Our Expert Faculty</h2>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6 section-title">Meet Our Expert Faculty</h2>
                         <ul class="space-y-3 text-lg">
-                            <li class="p-3 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
+                            <li class="p-4 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
                                 <span class="font-bold text-gray-800">Dr. Vinit Mistri</span>
                                 <span class="text-blue-600 font-semibold text-base">HOD & Associate Professor</span>
                             </li>
-                            <li class="p-3 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
+                            <li class="p-4 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
                                 <span class="font-bold text-gray-800">Dr. Mallika Babu</span>
                                 <span class="text-blue-600 font-semibold text-base">Associate Professor</span>
                             </li>
-                            <li class="p-3 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
+                            <li class="p-4 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
                                 <span class="font-bold text-gray-800">Dr. Hemali Broker</span>
                                 <span class="text-blue-600 font-semibold text-base">Assistant Professor</span>
                             </li>
-                            <li class="p-3 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
+                            <li class="p-4 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
                                 <span class="font-bold text-gray-800">Dr. Sejal Acharya</span>
                                 <span class="text-blue-600 font-semibold text-base">Assistant Professor</span>
                             </li>
-                            <li class="p-3 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
+                            <li class="p-4 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
                                 <span class="font-bold text-gray-800">Dr. Harshita Vijaywargi</span>
                                 <span class="text-blue-600 font-semibold text-base">Assistant Professor</span>
                             </li>
-                             <li class="p-3 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
+                             <li class="p-4 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
                                 <span class="font-bold text-gray-800">Dr. Heta Dave</span>
                                 <span class="text-blue-600 font-semibold text-base">Assistant Professor</span>
                             </li>
-                            <li class="p-3 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
+                            <li class="p-4 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
                                 <span class="font-bold text-gray-800">Prof. Madhav Purohit</span>
                                 <span class="text-blue-600 font-semibold text-base">Assistant Professor</span>
                             </li>
                         </ul>
                     </div>
                     <div class="mt-8 lg:mt-0">
-                        <a href="https://i.ibb.co/ynX0QRJ1/20250322-112440-AMBy-GPSMap-Camera.jpg" target="_blank" class="clickable-img-container">
-                            <img src="https://i.ibb.co/ynX0QRJ1/20250322-112440-AMBy-GPSMap-Camera.jpg" alt="Faculty Group Photo" class="rounded-lg shadow-lg w-full gallery-img">
+                        <a href="https://i.ibb.co/60JGMhrM/Whats-App-Image-2025-07-03-at-22-02-44-10f5ec9411.jpg" target="_blank" class="clickable-img-container">
+                            <img src="https://i.ibb.co/60JGMhrM/Whats-App-Image-2025-07-03-at-22-02-44-10f5ec9411.jpg" alt="Faculty Group Photo" class="rounded-lg shadow-lg w-full gallery-img">
                         </a>
                     </div>
                 </div>
             </section>
 
-            <section class="p-8 md:p-10 bg-gray-50">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <section class="p-8 md:p-12 bg-gray-50 fade-in-section">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div class="order-2 lg:order-1">
-                        <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title">Alumni Success Stories</h2>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6 section-title">Alumni Success Stories</h2>
                         <div class="carousel-container" id="alumni-carousel">
                             <div class="carousel-track">
-                                <div class="carousel-slide p-1"><div class="bg-white p-6 rounded-lg shadow-lg text-center h-full flex flex-col justify-center"><p class="text-gray-600 italic mb-4 text-base">"The best thing was the support we got from faculties. They were more like friends who guided us into the right direction."</p><div><h4 class="font-bold text-gray-900">Ms. Shreya Parikh</h4><p class="text-sm text-blue-600">Assistant HR Manager, Verve Systems</p></div></div></div>
-                                <div class="carousel-slide p-1"><div class="bg-white p-6 rounded-lg shadow-lg text-center h-full flex flex-col justify-center"><p class="text-gray-600 italic mb-4 text-base">"MBA @ LDRP was the first right decision towards my career planning. I got a chance to learn various skills from the institute."</p><div><h4 class="font-bold text-gray-900">Mr. Sachin Suvariya</h4><p class="text-sm text-blue-600">Deputy Manager, HDFC Bank</p></div></div></div>
-                                <div class="carousel-slide p-1"><div class="bg-white p-6 rounded-lg shadow-lg text-center h-full flex flex-col justify-center"><p class="text-gray-600 italic mb-4 text-base">"It was a great period of learning for me. The actual guidance about the corporate world I got there."</p><div><h4 class="font-bold text-gray-900">Ms. Alpa Purswani Soni</h4><p class="text-sm text-blue-600">Asst. Sourcing Manager, DB healthcare</p></div></div></div>
+                                <div class="carousel-slide p-1"><div class="bg-white p-8 rounded-lg shadow-lg text-center h-full flex flex-col justify-center"><p class="text-gray-600 italic mb-4 text-base">"The best thing was the support we got from faculties. They were more like friends who guided us into the right direction."</p><div><h4 class="font-bold text-gray-900">Ms. Shreya Parikh</h4><p class="text-sm text-blue-600">Assistant HR Manager, Verve Systems</p></div></div></div>
+                                <div class="carousel-slide p-1"><div class="bg-white p-8 rounded-lg shadow-lg text-center h-full flex flex-col justify-center"><p class="text-gray-600 italic mb-4 text-base">"MBA @ LDRP was the first right decision towards my career planning. I got a chance to learn various skills from the institute."</p><div><h4 class="font-bold text-gray-900">Mr. Sachin Suvariya</h4><p class="text-sm text-blue-600">Deputy Manager, HDFC Bank</p></div></div></div>
+                                <div class="carousel-slide p-1"><div class="bg-white p-8 rounded-lg shadow-lg text-center h-full flex flex-col justify-center"><p class="text-gray-600 italic mb-4 text-base">"It was a great period of learning for me. The actual guidance about the corporate world I got there."</p><div><h4 class="font-bold text-gray-900">Ms. Alpa Purswani Soni</h4><p class="text-sm text-blue-600">Asst. Sourcing Manager, DB healthcare</p></div></div></div>
                             </div>
                             <button class="carousel-button prev">&lt;</button>
                             <button class="carousel-button next">&gt;</button>
                         </div>
                     </div>
                     <div class="order-1 lg:order-2">
-                        <a href="https://i.ibb.co/kVB0zbG4/IMG-1018.jpg" target="_blank" class="clickable-img-container">
-                            <img src="https://i.ibb.co/kVB0zbG4/IMG-1018.jpg" alt="Students with Certificates" class="rounded-lg shadow-lg w-full gallery-img">
+                        <a href="https://i.ibb.co/7tbLFV9J/Whats-App-Image-2025-07-03-at-22-06-53-18bce3181212.jpg" target="_blank" class="clickable-img-container">
+                            <img src="https://i.ibb.co/7tbLFV9J/Whats-App-Image-2025-07-03-at-22-06-53-18bce3181212.jpg" alt="Students with Certificates" class="rounded-lg shadow-lg w-full gallery-img">
                         </a>
                     </div>
+                </div>
+            </section>
+            
+            <section class="p-8 md:p-12 bg-white fade-in-section">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Our Esteemed Placement Partners</h2>
+                <div class="max-w-5xl mx-auto">
+                    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-y-12 gap-x-8 items-center justify-items-center">
+                        <div class="relative group flex justify-center logo-item"><img src="https://logo.clearbit.com/hdfcbank.com" class="logo-img"><span class="absolute -top-8 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">HDFC Bank</span></div>
+                        <div class="relative group flex justify-center logo-item"><img src="https://logo.clearbit.com/iciciprulife.com" class="logo-img"><span class="absolute -top-8 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">ICICI Prudential</span></div>
+                        <div class="relative group flex justify-center logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Axis_Bank_logo.svg" class="logo-img"><span class="absolute -top-8 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Axis Bank</span></div>
+                        <div class="relative group flex justify-center logo-item"><img src="https://logo.clearbit.com/tcs.com" class="logo-img"><span class="absolute -top-8 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">TCS</span></div>
+                        <div class="relative group flex justify-center logo-item"><img src="https://logo.clearbit.com/hcltech.com" class="logo-img"><span class="absolute -top-8 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">HCL Technologies</span></div>
+                        <div class="relative group flex justify-center logo-item"><img src="https://logo.clearbit.com/airtel.in" class="logo-img"><span class="absolute -top-8 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Airtel</span></div>
+                        <div class="relative group flex justify-center logo-item"><img src="https://logo.clearbit.com/asianpaints.com" class="logo-img"><span class="absolute -top-8 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Asian Paints</span></div>
+                        <div class="relative group flex justify-center logo-item"><img src="https://logo.clearbit.com/bergerpaints.com" class="logo-img"><span class="absolute -top-8 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Berger Paints</span></div>
+                        <div class="relative group flex justify-center logo-item"><img src="https://logo.clearbit.com/bandhanbank.com" class="logo-img"><span class="absolute -top-8 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Bandhan Bank</span></div>
+                        <div class="relative group flex justify-center logo-item"><img src="https://logo.clearbit.com/angelone.in" class="logo-img"><span class="absolute -top-8 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Angel One</span></div>
+                        <div class="relative group flex justify-center logo-item"><img src="https://logo.clearbit.com/crisil.com" class="logo-img"><span class="absolute -top-8 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Crisil</span></div>
+                        <div class="relative group flex justify-center logo-item"><img src="https://logo.clearbit.com/jaroeducation.com" class="logo-img"><span class="absolute -top-8 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">JARO Education</span></div>
+                        <div class="relative group flex justify-center logo-item"><img src="https://logo.clearbit.com/licindia.in" class="logo-img"><span class="absolute -top-8 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">LIC</span></div>
+                        <div class="relative group flex justify-center logo-item"><img src="https://logo.clearbit.com/kotak.com" class="logo-img"><span class="absolute -top-8 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Kotak Mahindra Bank</span></div>
+                        <div class="relative group flex justify-center logo-item"><img src="https://logo.clearbit.com/eurekaforbes.com" class="logo-img"><span class="absolute -top-8 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Eureka Forbes</span></div>
+                        <div class="relative group flex justify-center logo-item"><img src="https://logo.clearbit.com/njgroup.in" class="logo-img"><span class="absolute -top-8 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">NJ India Investments</span></div>
+                        <div class="relative group flex justify-center logo-item"><img src="https://logo.clearbit.com/ramdevfood.com" class="logo-img"><span class="absolute -top-8 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Ramdev Masala</span></div>
+                        <div class="relative group flex justify-center logo-item"><img src="https://i.postimg.cc/tJqC7g9T/flourish-logo.png" class="logo-img"><span class="absolute -top-8 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Flourish Foods</span></div>
+                    </div>
+                    <p class="text-center text-gray-600 italic mt-12">...and many more leading companies.</p>
+                </div>
+            </section>
+
+            <!-- Callback Section -->
+            <section class="bg-blue-600 text-white p-8 md:p-12 fade-in-section">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold mb-2">Have Questions?</h2>
+                    <p class="text-lg text-blue-200 mb-6">Let us call you back shortly.</p>
+                    <button id="open-callback-modal" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-100 transition-colors">
+                        Request a Callback
+                    </button>
                 </div>
             </section>
 
@@ -210,8 +283,8 @@
                             <p class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg><span>Admissions Office, LDRP-ITR, Sector-15, Near KH-5, Gandhinagar - 382015, Gujarat.</span></p>
                             <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg><span>(O) 079-23241492, 079-23241493</span></p>
                             <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" /></svg><span>(M) 9998873083, 9099012233, 9429601579</span></p>
-                            <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg><span>mbaldrp@gmail.com</span></p>
-                             <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0l-1.5-1.5a2 2 0 112.828-2.828l1.5 1.5 3-3a2 2 0 010 2.828l-3 3a2 2 0 01-2.828 0l-1.5-1.5a2 2 0 012.828-2.828l1.5 1.5z" clip-rule="evenodd" /></svg><span>www.ldrp.ac.in</span></p>
+                            <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg><span>mbaldrp2024@gmail.com</span></p>
+                             <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.72 7.97 5 10 5c2.03 0 3.488.72 4.256 1.321l-1.18.918C12.438 6.877 11.32 6.5 10 6.5c-1.32 0-2.438.377-3.168.918a4.503 4.503 0 00-1.912 2.706c-.094.333-.142.68-.142 1.027s.048.694.142 1.027a4.503 4.503 0 001.912 2.706C7.562 14.28 8.68 14.5 10 14.5c1.32 0 2.438-.377-3.168.918a4.503 4.503 0 001.912-2.706c.094-.333.142-.68.142-1.027s-.048-.694-.142-1.027z" clip-rule="evenodd" /></svg><a href="https://www.ldrp.ac.in/mba/" target="_blank" class="hover:underline">https://www.ldrp.ac.in/mba/</a></p>
                         </div>
                     </div>
                 </div>
@@ -222,45 +295,167 @@
         </div>
     </div>
 
+    <!-- Callback Modal -->
+    <div id="callback-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden modal-backdrop">
+        <div class="bg-white rounded-lg shadow-2xl p-8 w-full max-w-md transform transition-all" id="modal-content">
+            <!-- Form View -->
+            <div id="form-view">
+                <form id="callback-form" action="https://formspree.io/f/mwpbzzag" method="POST">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800">Request a Callback</h3>
+                        <button type="button" id="close-callback-modal" class="text-gray-400 hover:text-gray-600">&times;</button>
+                    </div>
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="whatsapp" class="block text-gray-700 text-sm font-bold mb-2">WhatsApp Number</label>
+                        <input type="tel" id="whatsapp" name="WhatsApp Number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required pattern="\d{10,15}">
+                        <p class="text-xs text-gray-500 mt-1">Please enter a valid 10-15 digit phone number.</p>
+                    </div>
+                    <div class="flex items-center justify-end">
+                        <button type="submit" id="submit-button" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- Status View -->
+            <div id="status-view" class="hidden text-center"></div>
+        </div>
+    </div>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const carousel = document.getElementById('alumni-carousel');
-            if (carousel) {
-                const track = carousel.querySelector('.carousel-track');
-                const slides = Array.from(track.children);
-                const nextButton = carousel.querySelector('.next');
-                const prevButton = carousel.querySelector('.prev');
-                
-                let currentIndex = 0;
+        // Modal Handling
+        const modal = document.getElementById('callback-modal');
+        const openModalBtn = document.getElementById('open-callback-modal');
+        const closeModalBtn = document.getElementById('close-callback-modal');
+        const form = document.getElementById('callback-form');
+        const formView = document.getElementById('form-view');
+        const statusView = document.getElementById('status-view');
+        const submitButton = document.getElementById('submit-button');
 
-                const updateCarousel = () => {
-                    if (slides.length === 0) return;
-                    const slideWidth = slides[0].getBoundingClientRect().width;
-                    if (slideWidth === 0) return; // Avoid issues on hidden elements
-                    track.style.transform = 'translateX(-' + slideWidth * currentIndex + 'px)';
-                }
-                
-                nextButton.addEventListener('click', e => {
-                    currentIndex = (currentIndex + 1) % slides.length;
-                    updateCarousel();
-                });
-
-                prevButton.addEventListener('click', e => {
-                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-                    updateCarousel();
-                });
-                
-                setInterval(() => {
-                    currentIndex = (currentIndex + 1) % slides.length;
-                    updateCarousel();
-                }, 5000);
-
-                window.addEventListener('resize', updateCarousel);
-                
-                // Use a small timeout to ensure layout is calculated
-                setTimeout(updateCarousel, 100);
+        openModalBtn.addEventListener('click', () => modal.classList.remove('hidden'));
+        closeModalBtn.addEventListener('click', () => modal.classList.add('hidden'));
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
             }
         });
+        
+        // Formspree Submission
+        async function handleSubmit(event) {
+            event.preventDefault();
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+            
+            const data = new FormData(event.target);
+            try {
+                const response = await fetch(event.target.action, {
+                    method: event.target.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                if (response.ok) {
+                    formView.classList.add('hidden');
+                    statusView.innerHTML = `
+                        <div class="flex justify-center mb-4">
+                            <svg class="h-16 w-16 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Thank You!</h3>
+                        <p class="text-gray-600">Your request has been sent. We will call you back soon.</p>
+                    `;
+                    statusView.classList.remove('hidden');
+                    form.reset();
+                    setTimeout(() => {
+                        modal.classList.add('hidden');
+                        setTimeout(() => {
+                            formView.classList.remove('hidden');
+                            statusView.classList.add('hidden');
+                        }, 500);
+                    }, 3000);
+                } else {
+                    throw new Error('Network response was not ok.');
+                }
+            } catch (error) {
+                formView.classList.add('hidden');
+                statusView.innerHTML = `
+                    <h3 class="text-2xl font-bold text-red-600 mb-2">Oops!</h3>
+                    <p class="text-gray-600">There was a problem submitting your form. Please try again.</p>
+                `;
+                statusView.classList.remove('hidden');
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Submit';
+            }
+        }
+        form.addEventListener("submit", handleSubmit)
+
+        // Carousel script
+        const carousel = document.getElementById('alumni-carousel');
+        if (carousel) {
+            const track = carousel.querySelector('.carousel-track');
+            const slides = Array.from(track.children);
+            const nextButton = carousel.querySelector('.next');
+            const prevButton = carousel.querySelector('.prev');
+            let currentIndex = 0;
+            const updateCarousel = () => {
+                if (slides.length === 0) return;
+                const slideWidth = slides[0].getBoundingClientRect().width;
+                if (slideWidth === 0) return;
+                track.style.transform = 'translateX(-' + slideWidth * currentIndex + 'px)';
+            }
+            nextButton.addEventListener('click', e => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateCarousel();
+            });
+            prevButton.addEventListener('click', e => {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateCarousel();
+            });
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateCarousel();
+            }, 5000);
+            window.addEventListener('resize', updateCarousel);
+            setTimeout(updateCarousel, 100);
+        }
+        
+        // Scroll Animation
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Accordion
+        const accordionContainer = document.getElementById('accordion-container');
+        if(accordionContainer) {
+            const accordionItems = accordionContainer.querySelectorAll('.accordion-item');
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                header.addEventListener('click', () => {
+                    const currentlyActive = document.querySelector('.accordion-item.active');
+                    if(currentlyActive && currentlyActive !== item) {
+                        currentlyActive.classList.remove('active');
+                    }
+                    item.classList.toggle('active');
+                });
+            });
+        }
     </script>
 </body>
 </html>
