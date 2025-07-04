@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LDRP-ITR MBA Promotional Pamphlet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 21, 41, 0.7), rgba(0, 21, 41, 0.7)), url('https://i.ibb.co/V06jwJDR/1583918159714.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            border-bottom: 3px solid #0056b3;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+        .card-hover, .gallery-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover, .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.15);
+        }
+        /* Carousel styles */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .carousel-button.prev {
+            left: 1rem;
+        }
+        .carousel-button.next {
+            right: 1rem;
+        }
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: filter 0.3s ease;
+        }
+        .clickable-img-container:hover .gallery-img {
+            filter: brightness(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+        
+        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+
+            <header class="hero-section text-white text-center p-12 md:p-20">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-2 tracking-tight">Shape Your Future in Business</h1>
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-300 mb-4">MBA @ LDRP-ITR</h2>
+                <p class="text-lg md:text-xl font-medium text-blue-200">Where Leadership Meets Opportunity.</p>
+            </header>
+
+            <section class="p-8 md:p-10 bg-white">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Why Choose LDRP for Your MBA?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="text-center p-6 bg-gray-50 rounded-lg card-hover">
+                        <div class="flex justify-center mb-4"><div class="bg-blue-100 p-4 rounded-full"><svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.82m5.84-2.56a16.95 16.95 0 00-2.63-3.07A6 6 0 017.74 8.04v-4.82a16.95 16.95 0 00-2.63 3.07m11.48-3.07a16.95 16.95 0 00-2.63-3.07M3.75 6.75A16.95 16.95 0 016.38 3.68m11.48 3.07a16.95 16.95 0 012.63-3.07M21 6.75A16.95 16.95 0 0018.37 3.68m-1.54 9.49a5.98 5.98 0 01-1.04-3.07M15.23 7.23a5.98 5.98 0 00-1.04-3.07M6.38 3.68a5.98 5.98 0 01-1.04 3.07M8.26 15.23a5.98 5.98 0 001.04 3.07" /></svg></div></div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Accelerate Your Career</h3>
+                        <p class="text-gray-600">Leverage our strong industry connections and excellent placement record to land your dream job in top-tier companies.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="text-center p-6 bg-gray-50 rounded-lg card-hover">
+                        <div class="flex justify-center mb-4"><div class="bg-blue-100 p-4 rounded-full"><svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg></div></div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Gain Practical Skills</h3>
+                        <p class="text-gray-600">Move beyond theory with a curriculum rich in case studies, live projects, and role-playing to solve real-world business problems.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="text-center p-6 bg-gray-50 rounded-lg card-hover">
+                        <div class="flex justify-center mb-4"><div class="bg-blue-100 p-4 rounded-full"><svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.962a3.75 3.75 0 015.25 0m-5.25 0a3.75 3.75 0 00-5.25 0M3 13.5g7.5-5.25L18 13.5m0 0a3 3 0 11-5.712 1.128" /></svg></div></div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Build a Strong Network</h3>
+                        <p class="text-gray-600">Learn from expert faculty and connect with our successful alumni network, creating relationships that last a lifetime.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="p-8 md:p-10 bg-gray-50">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Glimpses of Life @ LDRP</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="gallery-item rounded-lg overflow-hidden col-span-2 md:col-span-1"><a href="https://i.ibb.co/gLZ95316/v3.jpg" target="_blank" class="clickable-img-container"><img src="https://i.ibb.co/gLZ95316/v3.jpg" alt="Industrial Visit to Vadilal" class="gallery-img"></a></div>
+                    <div class="gallery-item rounded-lg overflow-hidden"><a href="https://i.ibb.co/SDSKdKWM/IMG-20250205-WA0083.jpg" target="_blank" class="clickable-img-container"><img src="https://i.ibb.co/SDSKdKWM/IMG-20250205-WA0083.jpg" alt="Classroom Session" class="gallery-img"></a></div>
+                    <div class="gallery-item rounded-lg overflow-hidden"><a href="https://i.ibb.co/nqDZv8FM/IMG-5418.jpg" target="_blank" class="clickable-img-container"><img src="https://i.ibb.co/nqDZv8FM/IMG-5418.jpg" alt="Auditorium Session" class="gallery-img"></a></div>
+                    <div class="gallery-item rounded-lg overflow-hidden"><a href="https://i.ibb.co/tp0N3yV4/inter-campus-visit-2025-4.jpg" target="_blank" class="clickable-img-container"><img src="https://i.ibb.co/tp0N3yV4/inter-campus-visit-2025-4.jpg" alt="Campus Visit" class="gallery-img"></a></div>
+                    <div class="gallery-item rounded-lg overflow-hidden col-span-2"><a href="https://i.ibb.co/99ZmBJK2/IMG-20240920-WA0025.jpg" target="_blank" class="clickable-img-container"><img src="https://i.ibb.co/99ZmBJK2/IMG-20240920-WA0025.jpg" alt="Student Activity" class="gallery-img"></a></div>
+                </div>
+            </section>
+
+            <section class="p-8 md:p-10 bg-white">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title">Meet Our Expert Faculty</h2>
+                        <ul class="space-y-3 text-lg">
+                            <li class="p-3 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
+                                <span class="font-bold text-gray-800">Dr. Vinit Mistri</span>
+                                <span class="text-blue-600 font-semibold text-base">HOD & Associate Professor</span>
+                            </li>
+                            <li class="p-3 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
+                                <span class="font-bold text-gray-800">Dr. Mallika Babu</span>
+                                <span class="text-blue-600 font-semibold text-base">Associate Professor</span>
+                            </li>
+                            <li class="p-3 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
+                                <span class="font-bold text-gray-800">Dr. Hemali Broker</span>
+                                <span class="text-blue-600 font-semibold text-base">Assistant Professor</span>
+                            </li>
+                            <li class="p-3 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
+                                <span class="font-bold text-gray-800">Dr. Sejal Acharya</span>
+                                <span class="text-blue-600 font-semibold text-base">Assistant Professor</span>
+                            </li>
+                            <li class="p-3 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
+                                <span class="font-bold text-gray-800">Dr. Harshita Vijaywargi</span>
+                                <span class="text-blue-600 font-semibold text-base">Assistant Professor</span>
+                            </li>
+                             <li class="p-3 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
+                                <span class="font-bold text-gray-800">Dr. Heta Dave</span>
+                                <span class="text-blue-600 font-semibold text-base">Assistant Professor</span>
+                            </li>
+                            <li class="p-3 bg-gray-50 rounded-lg flex justify-between items-center card-hover">
+                                <span class="font-bold text-gray-800">Prof. Madhav Purohit</span>
+                                <span class="text-blue-600 font-semibold text-base">Assistant Professor</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 lg:mt-0">
+                        <a href="https://i.ibb.co/ynX0QRJ1/20250322-112440-AMBy-GPSMap-Camera.jpg" target="_blank" class="clickable-img-container">
+                            <img src="https://i.ibb.co/ynX0QRJ1/20250322-112440-AMBy-GPSMap-Camera.jpg" alt="Faculty Group Photo" class="rounded-lg shadow-lg w-full gallery-img">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="p-8 md:p-10 bg-gray-50">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div class="order-2 lg:order-1">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title">Alumni Success Stories</h2>
+                        <div class="carousel-container" id="alumni-carousel">
+                            <div class="carousel-track">
+                                <div class="carousel-slide p-1"><div class="bg-white p-6 rounded-lg shadow-lg text-center h-full flex flex-col justify-center"><p class="text-gray-600 italic mb-4 text-base">"The best thing was the support we got from faculties. They were more like friends who guided us into the right direction."</p><div><h4 class="font-bold text-gray-900">Ms. Shreya Parikh</h4><p class="text-sm text-blue-600">Assistant HR Manager, Verve Systems</p></div></div></div>
+                                <div class="carousel-slide p-1"><div class="bg-white p-6 rounded-lg shadow-lg text-center h-full flex flex-col justify-center"><p class="text-gray-600 italic mb-4 text-base">"MBA @ LDRP was the first right decision towards my career planning. I got a chance to learn various skills from the institute."</p><div><h4 class="font-bold text-gray-900">Mr. Sachin Suvariya</h4><p class="text-sm text-blue-600">Deputy Manager, HDFC Bank</p></div></div></div>
+                                <div class="carousel-slide p-1"><div class="bg-white p-6 rounded-lg shadow-lg text-center h-full flex flex-col justify-center"><p class="text-gray-600 italic mb-4 text-base">"It was a great period of learning for me. The actual guidance about the corporate world I got there."</p><div><h4 class="font-bold text-gray-900">Ms. Alpa Purswani Soni</h4><p class="text-sm text-blue-600">Asst. Sourcing Manager, DB healthcare</p></div></div></div>
+                            </div>
+                            <button class="carousel-button prev">&lt;</button>
+                            <button class="carousel-button next">&gt;</button>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <a href="https://i.ibb.co/kVB0zbG4/IMG-1018.jpg" target="_blank" class="clickable-img-container">
+                            <img src="https://i.ibb.co/kVB0zbG4/IMG-1018.jpg" alt="Students with Certificates" class="rounded-lg shadow-lg w-full gallery-img">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="bg-gray-800 text-white p-8 md:p-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Admissions Open 2025</h3>
+                        <h4 class="font-semibold text-blue-300">Eligibility:</h4>
+                        <p class="text-gray-300 text-sm mb-4">A recognized Bachelor's Degree in any discipline. Minimum 50% aggregate marks (45% for reserved category) & a valid CMAT score.</p>
+                        <h4 class="font-semibold text-blue-300 mt-4">How to Apply:</h4>
+                        <div class="flex items-center gap-4 mt-2">
+                            <div class="flex-shrink-0">
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRmKGx0vc1WdzFTaEy84sNz_3msNMgO3gj_prQNJqZF4og1Q/viewform?usp=header" target="_blank">
+                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://docs.google.com/forms/d/e/1FAIpQLSfRmKGx0vc1WdzFTaEy84sNz_3msNMgO3gj_prQNJqZF4og1Q/viewform?usp=header&color=000000&bgcolor=FFFFFF&qzone=1" alt="QR Code to Apply" class="rounded-lg bg-white p-1">
+                                </a>
+                            </div>
+                            <div>
+                                <p class="text-gray-300 text-sm mb-3">Scan the QR code or click the button below to fill out the inquiry form.</p>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRmKGx0vc1WdzFTaEy84sNz_3msNMgO3gj_prQNJqZF4og1Q/viewform?usp=header" target="_blank" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                                    Apply Online
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Get in Touch!</h3>
+                        <div class="space-y-3 text-gray-300">
+                            <p class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg><span>Admissions Office, LDRP-ITR, Sector-15, Near KH-5, Gandhinagar - 382015, Gujarat.</span></p>
+                            <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg><span>(O) 079-23241492, 079-23241493</span></p>
+                            <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" /></svg><span>(M) 9998873083, 9099012233, 9429601579</span></p>
+                            <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg><span>mbaldrp@gmail.com</span></p>
+                             <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0l-1.5-1.5a2 2 0 112.828-2.828l1.5 1.5 3-3a2 2 0 010 2.828l-3 3a2 2 0 01-2.828 0l-1.5-1.5a2 2 0 012.828-2.828l1.5 1.5z" clip-rule="evenodd" /></svg><span>www.ldrp.ac.in</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-xs text-gray-400 mt-8 pt-6 border-t border-gray-700">
+                    Approved by AICTE | Affiliated to Kadi Sarva Vishwavidyalaya (KSV), Gandhinagar
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.getElementById('alumni-carousel');
+            if (carousel) {
+                const track = carousel.querySelector('.carousel-track');
+                const slides = Array.from(track.children);
+                const nextButton = carousel.querySelector('.next');
+                const prevButton = carousel.querySelector('.prev');
+                
+                let currentIndex = 0;
+
+                const updateCarousel = () => {
+                    if (slides.length === 0) return;
+                    const slideWidth = slides[0].getBoundingClientRect().width;
+                    if (slideWidth === 0) return; // Avoid issues on hidden elements
+                    track.style.transform = 'translateX(-' + slideWidth * currentIndex + 'px)';
+                }
+                
+                nextButton.addEventListener('click', e => {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    updateCarousel();
+                });
+
+                prevButton.addEventListener('click', e => {
+                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    updateCarousel();
+                });
+                
+                setInterval(() => {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    updateCarousel();
+                }, 5000);
+
+                window.addEventListener('resize', updateCarousel);
+                
+                // Use a small timeout to ensure layout is calculated
+                setTimeout(updateCarousel, 100);
+            }
+        });
+    </script>
+</body>
+</html>
